@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Copy, ExternalLink, ShieldCheck, Zap } from 'lucide-react';
 
-const CONTRACT_ADDRESS = 'E8MKbuvjXEKX8zgjhyNuWYoTBmxGCjkdNx8uYdRBuV7t';
+const CONTRACT_ADDRESS = 'TBA';
 
 export function Hero() {
   return (
@@ -87,17 +87,17 @@ export function Hero() {
           <div className="p-5 sm:p-6 flex items-center justify-between gap-4">
             <div className="min-w-0">
               <div className="text-[10px] uppercase tracking-[0.2em] text-primary-300">Launch details</div>
-              <div className="mt-2 font-mono text-xs sm:text-sm text-ink-200 break-all">{CONTRACT_ADDRESS}</div>
-              <div className="mt-1 text-[10px] uppercase tracking-wider text-ink-500">Solana contract address</div>
+              <div className="mt-2 font-mono text-sm text-primary-300">{CONTRACT_ADDRESS}</div>
+              <div className="mt-1 text-[10px] uppercase tracking-wider text-ink-500">Official contract address pending</div>
             </div>
-            <button type="button" className="inline-flex items-center gap-2 px-3 py-2 border border-white/15 text-[10px] uppercase tracking-wider font-bold text-white hover:border-primary-400 hover:text-primary-300 transition-colors flex-shrink-0" onClick={() => navigator.clipboard?.writeText(CONTRACT_ADDRESS)}>
-              <Copy className="w-3.5 h-3.5" /> Copy
-            </button>
+            <span className="inline-flex items-center gap-2 px-3 py-2 border border-white/10 text-[10px] uppercase tracking-wider font-bold text-ink-500 flex-shrink-0">
+              <Copy className="w-3.5 h-3.5" /> Coming soon
+            </span>
           </div>
         </div>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-7 gap-y-2 text-[10px] uppercase tracking-[0.2em] text-ink-500">
-          <span>Care verification required</span><span className="text-primary-500">•</span><span>24/7 digital access</span><span className="text-primary-500">•</span><span>Protection for everyone</span><a href="#overview" className="ml-auto inline-flex items-center gap-1.5 text-primary-400 hover:text-primary-300"><ExternalLink className="w-3 h-3" /> Read the act</a>
+          <span>Contract verification pending</span><span className="text-primary-500">•</span><span>24/7 digital access</span><span className="text-primary-500">•</span><span>Protection for everyone</span><a href="#overview" className="ml-auto inline-flex items-center gap-1.5 text-primary-400 hover:text-primary-300"><ExternalLink className="w-3 h-3" /> Read the act</a>
         </div>
       </div>
     </section>
