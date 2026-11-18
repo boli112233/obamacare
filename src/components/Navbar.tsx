@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 const navLinks = [
   { to: '/about', label: 'The Act' },
@@ -35,8 +35,8 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="flex items-center justify-between h-[72px]">
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 border border-primary-400/70 bg-primary-500/10 flex items-center justify-center transition-colors group-hover:bg-primary-500/20">
-                <ShieldCheck className="w-5 h-5 text-primary-300" />
+              <div className="w-10 h-10 border border-primary-400/70 bg-primary-500/10 overflow-hidden transition-colors group-hover:bg-primary-500/20">
+                <img src="/Obamacare copy.jpg" alt="Obamacare logo" className="w-full h-full object-cover" />
               </div>
               <div>
                 <span className="block font-display font-extrabold text-lg tracking-tight text-white uppercase">Care <span className="text-primary-400">Obamacare</span></span>
