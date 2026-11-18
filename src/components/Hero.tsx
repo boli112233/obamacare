@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Copy, ExternalLink, ShieldCheck, Zap } from 'lucide-react';
 
-const CONTRACT_ADDRESS = 'TBA';
+const CONTRACT_ADDRESS = '8eAuu9WtPWAecAbV7gybm36YhcDRprSzRt6P8uPipump';
 
 export function Hero() {
   return (
@@ -57,7 +57,7 @@ export function Hero() {
               <Zap className="w-3.5 h-3.5" /> Care is live
             </div>
             <div className="launch-card-frame relative p-2 border border-primary-500/60 bg-ink-900 shadow-2xl shadow-primary-950/70">
-              <img src="/824382e3-f0d0-4717-a3b7-085145061ddb.png" alt="CARE OBAMACARE launch artwork" className="aspect-square w-full object-cover" />
+              <div className="aspect-square w-full flex items-center justify-center bg-ink-950 p-16 sm:p-24"><img src="/obamacare-mark.svg" alt="Obamacare mark" className="w-full max-w-[220px]" /></div>
               <div className="absolute inset-2 bg-gradient-to-t from-ink-950/75 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
                 <div>
@@ -88,16 +88,16 @@ export function Hero() {
             <div className="min-w-0">
               <div className="text-[10px] uppercase tracking-[0.2em] text-primary-300">Launch details</div>
               <div className="mt-2 font-mono text-sm text-primary-300">{CONTRACT_ADDRESS}</div>
-              <div className="mt-1 text-[10px] uppercase tracking-wider text-ink-500">Official contract address pending</div>
+              <div className="mt-1 text-[10px] uppercase tracking-wider text-ink-500">Live contract address · Solana</div>
             </div>
-            <span className="inline-flex items-center gap-2 px-3 py-2 border border-white/10 text-[10px] uppercase tracking-wider font-bold text-ink-500 flex-shrink-0">
-              <Copy className="w-3.5 h-3.5" /> Coming soon
-            </span>
+            <button type="button" className="inline-flex items-center gap-2 px-3 py-2 border border-white/15 text-[10px] uppercase tracking-wider font-bold text-white hover:border-primary-400 hover:text-primary-300 transition-colors flex-shrink-0" onClick={() => navigator.clipboard?.writeText(CONTRACT_ADDRESS)}>
+              <Copy className="w-3.5 h-3.5" /> Copy CA
+            </button>
           </div>
         </div>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-7 gap-y-2 text-[10px] uppercase tracking-[0.2em] text-ink-500">
-          <span>Contract verification pending</span><span className="text-primary-500">•</span><span>24/7 digital access</span><span className="text-primary-500">•</span><span>Protection for everyone</span><a href="#overview" className="ml-auto inline-flex items-center gap-1.5 text-primary-400 hover:text-primary-300"><ExternalLink className="w-3 h-3" /> Read the act</a>
+          <span>Contract verified live</span><span className="text-primary-500">•</span><span>24/7 digital access</span><span className="text-primary-500">•</span><span>Protection for everyone</span><a href="#overview" className="ml-auto inline-flex items-center gap-1.5 text-primary-400 hover:text-primary-300"><ExternalLink className="w-3 h-3" /> Read the act</a>
         </div>
       </div>
     </section>
