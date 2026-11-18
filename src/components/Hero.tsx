@@ -57,7 +57,7 @@ export function Hero() {
               <Zap className="w-3.5 h-3.5" /> Care is live
             </div>
             <div className="launch-card-frame relative p-2 border border-primary-500/60 bg-ink-900 shadow-2xl shadow-primary-950/70">
-              <img src="/Obamacare copy 2.jpg" alt="CARE OBAMACARE launch artwork" className="aspect-square w-full object-cover" />
+              <img src="/824382e3-f0d0-4717-a3b7-085145061ddb.png" alt="CARE OBAMACARE launch artwork" className="aspect-square w-full object-cover" />
               <div className="absolute inset-2 bg-gradient-to-t from-ink-950/75 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
                 <div>
