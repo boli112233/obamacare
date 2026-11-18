@@ -31,7 +31,7 @@ export function Navbar() {
       <div className="hidden md:block bg-primary-950 text-primary-100 text-[11px] tracking-wide">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-8 flex items-center justify-between">
           <span>OBAMACARE.VOTE · YOUR GUIDE TO THE AFFORDABLE CARE ACT</span>
-          <span className="text-primary-300">A public information resource</span>
+          <span className="text-primary-300">G71iRHbh9FYPqVF5zDy3Zb4HRZkJV31Sg2MHpm3tpump</span>
         </div>
       </div>
 
