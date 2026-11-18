@@ -20,7 +20,7 @@ export function Hero() {
 
             <h1 className="mt-6 font-display font-extrabold uppercase leading-[0.86] tracking-[-0.06em] animate-fade-up" style={{ animationDelay: '0.1s', opacity: 0 }}>
               <span className="block text-6xl sm:text-8xl lg:text-[8.5rem] text-white">Care</span>
-              <span className="block text-6xl sm:text-8xl lg:text-[8.5rem] text-outline-blue">Obamacare</span>
+              <span className="block text-6xl sm:text-8xl lg:text-[8.5rem] text-outline-gold">Obamacare</span>
             </h1>
 
             <p className="mt-8 max-w-xl text-base sm:text-lg text-ink-300 leading-relaxed animate-fade-up" style={{ animationDelay: '0.2s', opacity: 0 }}>

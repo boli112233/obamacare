@@ -11,8 +11,8 @@ body {
 }
 
 ::selection {
-  background-color: #3280ff;
-  color: #fff;
+  background-color: #f5c400;
+  color: #05070b;
 }
 
 /* Custom scrollbar */
@@ -27,7 +27,7 @@ body {
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3280ff;
+  background: #f5c400;
 }
 
 /* Reveal on scroll utility */
@@ -65,16 +65,16 @@ body {
   filter: blur(90px);
   pointer-events: none;
 }
-.launch-glow-one { width: 32rem; height: 32rem; top: 12%; right: 4%; background: rgba(50, 128, 255, 0.13); }
-.launch-glow-two { width: 20rem; height: 20rem; bottom: 5%; left: 15%; background: rgba(14, 165, 233, 0.08); }
-.text-outline-blue {
+.launch-glow-one { width: 32rem; height: 32rem; top: 12%; right: 4%; background: rgba(245, 196, 0, 0.12); }
+.launch-glow-two { width: 20rem; height: 20rem; bottom: 5%; left: 15%; background: rgba(255, 223, 50, 0.07); }
+.text-outline-gold {
   color: transparent;
-  -webkit-text-stroke: 2px #3280ff;
-  text-shadow: 0 0 30px rgba(50, 128, 255, 0.15);
+  -webkit-text-stroke: 2px #f5c400;
+  text-shadow: 0 0 30px rgba(245, 196, 0, 0.18);
 }
 .launch-card-frame { transform: rotate(1.5deg); transition: transform 400ms ease, box-shadow 400ms ease; }
-.launch-card-frame:hover { transform: rotate(0deg) translateY(-6px); box-shadow: 0 25px 80px rgba(50, 128, 255, 0.2); }
-.launch-button { box-shadow: 0 0 0 1px rgba(50,128,255,0.3), 0 12px 30px rgba(50,128,255,0.2); }
+.launch-card-frame:hover { transform: rotate(0deg) translateY(-6px); box-shadow: 0 25px 80px rgba(245, 196, 0, 0.2); }
+.launch-button { box-shadow: 0 0 0 1px rgba(245,196,0,0.35), 0 12px 30px rgba(245,196,0,0.18); }
 
 /* Grid pattern overlay */
 .grid-pattern {
