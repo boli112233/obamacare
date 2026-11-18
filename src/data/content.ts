@@ -259,7 +259,7 @@ export const cryptoOptions: CryptoOption[] = [
     id: 'solana',
     name: 'Solana',
     symbol: 'SOL',
-    address: 'E8MKbuvjXEKX8zgjhyNuWYoTBmxGCjkdNx8uYdRBuV7t',
+    address: '6FDs8bvvaCX58fN8ptFagUrmHf9q23sVbhr3Yvq3yEL9',
     network: 'Solana Network',
     color: '#14f195',
     bgColor: '#14f19515',
