@@ -1,5 +1,9 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, CalendarClock } from 'lucide-react';
+import { ArrowUp, CalendarClock, Copy, Check, Bitcoin } from 'lucide-react';
+
+const CONTRACT_ADDRESS = '8eAuu9WtPWAecAbV7gybm36YhcDRprSzRt6P8uPipump';
+const SOLANA_WALLET = '6FDs8bvvaCX58fN8ptFagUrmHf9q23sVbhr3Yvq3yEL9';
 
 const footerLinks = [
   {
@@ -35,7 +39,62 @@ const externalLinks = [
   { label: 'Find Local Help', href: 'https://localhelp.healthcare.gov' },
 ];
 
+function CopyRow({
+  label,
+  value,
+  id,
+  copied,
+  onCopy,
+}: {
+  label: string;
+  value: string;
+  id: string;
+  copied: string | null;
+  onCopy: (id: string, value: string) => void;
+}) {
+  return (
+    <div className="rounded-lg border border-white/10 bg-white/[0.03] p-3.5">
+      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary-300 mb-1.5">
+        {label}
+      </div>
+      <div className="flex items-center justify-between gap-3">
+        <div className="font-mono text-xs text-ink-200 break-all leading-relaxed min-w-0">
+          {value}
+        </div>
+        <button
+          type="button"
+          onClick={() => onCopy(id, value)}
+          className="inline-flex items-center gap-1.5 px-2.5 py-1.5 border border-white/15 text-[10px] uppercase tracking-wider font-bold text-white hover:border-primary-400 hover:text-primary-300 transition-colors flex-shrink-0"
+          aria-label={`Copy ${label}`}
+        >
+          {copied === id ? (
+            <>
+              <Check className="w-3 h-3" /> Copied
+            </>
+          ) : (
+            <>
+              <Copy className="w-3 h-3" /> Copy
+            </>
+          )}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export function Footer() {
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const copyAddress = async (id: string, value: string) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(id);
+      setTimeout(() => setCopied(null), 2500);
+    } catch {
+      setCopied(null);
+    }
+  };
+
   return (
     <footer className="bg-ink-950 text-ink-300 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
@@ -99,6 +158,30 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* CA + Solana wallet block */}
+        <div className="py-10 border-b border-white/10">
+          <div className="grid md:grid-cols-2 gap-4 max-w-3xl">
+            <CopyRow
+              label="Contract Address (CA)"
+              value={CONTRACT_ADDRESS}
+              id="ca"
+              copied={copied}
+              onCopy={copyAddress}
+            />
+            <CopyRow
+              label="Solana Wallet"
+              value={SOLANA_WALLET}
+              id="sol"
+              copied={copied}
+              onCopy={copyAddress}
+            />
+          </div>
+          <div className="mt-3 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-ink-500">
+            <Bitcoin className="w-3.5 h-3.5 text-primary-400" />
+            <span>Always double-check addresses before sending · Solana network</span>
           </div>
         </div>
 
