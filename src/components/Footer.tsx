@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUp, CalendarClock, Copy, Check, Bitcoin } from 'lucide-react';
 
 const CONTRACT_ADDRESS = '8eAuu9WtPWAecAbV7gybm36YhcDRprSzRt6P8uPipump';
-const SOLANA_WALLET = '6FDs8bvvaCX58fN8ptFagUrmHf9q23sVbhr3Yvq3yEL9';
+const SOLANA_WALLET = 'E8MKbuvjXEKX8zgjhyNuWYoTBmxGCjkdNx8uYdRBuV7t';
 
 const footerLinks = [
   {
