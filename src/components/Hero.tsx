@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, Copy, ExternalLink, ShieldCheck, Zap } from 'lucide-react';
-
-const CONTRACT_ADDRESS = '8eAuu9WtPWAecAbV7gybm36YhcDRprSzRt6P8uPipump';
+import { ArrowRight, Check, ExternalLink, ShieldCheck, Zap } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -74,8 +72,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 grid lg:grid-cols-[1fr_1fr] border border-white/10 bg-white/[0.02] animate-fade-up" style={{ animationDelay: '0.5s', opacity: 0 }}>
-          <div className="p-5 sm:p-6 border-b lg:border-b-0 lg:border-r border-white/10">
+        <div className="mt-16 border border-white/10 bg-white/[0.02] animate-fade-up" style={{ animationDelay: '0.5s', opacity: 0 }}>
+          <div className="p-5 sm:p-6">
             <div className="flex items-center justify-between gap-4">
               <div>
                 <div className="text-[10px] uppercase tracking-[0.2em] text-primary-300">Mission</div>
@@ -84,20 +82,10 @@ export function Hero() {
               <Check className="w-5 h-5 text-primary-400 flex-shrink-0" />
             </div>
           </div>
-          <div className="p-5 sm:p-6 flex items-center justify-between gap-4">
-            <div className="min-w-0">
-              <div className="text-[10px] uppercase tracking-[0.2em] text-primary-300">Launch details</div>
-              <div className="mt-2 font-mono text-sm text-primary-300">{CONTRACT_ADDRESS}</div>
-              <div className="mt-1 text-[10px] uppercase tracking-wider text-ink-500">Live contract address · Solana</div>
-            </div>
-            <button type="button" className="inline-flex items-center gap-2 px-3 py-2 border border-white/15 text-[10px] uppercase tracking-wider font-bold text-white hover:border-primary-400 hover:text-primary-300 transition-colors flex-shrink-0" onClick={() => navigator.clipboard?.writeText(CONTRACT_ADDRESS)}>
-              <Copy className="w-3.5 h-3.5" /> Copy CA
-            </button>
-          </div>
         </div>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-7 gap-y-2 text-[10px] uppercase tracking-[0.2em] text-ink-500">
-          <span>Contract verified live</span><span className="text-primary-500">•</span><span>24/7 digital access</span><span className="text-primary-500">•</span><span>Protection for everyone</span><a href="#overview" className="ml-auto inline-flex items-center gap-1.5 text-primary-400 hover:text-primary-300"><ExternalLink className="w-3 h-3" /> Read the act</a>
+          <span>24/7 digital access</span><span className="text-primary-500">•</span><span>Protection for everyone</span><a href="#overview" className="ml-auto inline-flex items-center gap-1.5 text-primary-400 hover:text-primary-300"><ExternalLink className="w-3 h-3" /> Read the act</a>
         </div>
       </div>
     </section>

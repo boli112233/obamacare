@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp, CalendarClock, Copy, Check, Bitcoin } from 'lucide-react';
 
-const CONTRACT_ADDRESS = '8eAuu9WtPWAecAbV7gybm36YhcDRprSzRt6P8uPipump';
 const SOLANA_WALLET = 'E8MKbuvjXEKX8zgjhyNuWYoTBmxGCjkdNx8uYdRBuV7t';
 
 const footerLinks = [
@@ -161,16 +160,9 @@ export function Footer() {
           </div>
         </div>
 
-        {/* CA + Solana wallet block */}
+        {/* Solana wallet block */}
         <div className="py-10 border-b border-white/10">
-          <div className="grid md:grid-cols-2 gap-4 max-w-3xl">
-            <CopyRow
-              label="Contract Address (CA)"
-              value={CONTRACT_ADDRESS}
-              id="ca"
-              copied={copied}
-              onCopy={copyAddress}
-            />
+          <div className="max-w-md">
             <CopyRow
               label="Solana Wallet"
               value={SOLANA_WALLET}
